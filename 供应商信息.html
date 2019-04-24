@@ -1,0 +1,124 @@
+<style>
+	.view{width:100px;text-align: center;display: block;}
+	.pj{float:left;margin-top:20px;}
+	.pj> span{margin-right:10px;font-size:12px;}
+	.a{color:#FF0000;}
+	.b{color:#02CC42;}
+	.c{color:#007DDB;}
+	.d{color:#000;}
+</style>
+<div class="w100 ov">
+	<div class="search">
+		<span class="pj">
+			<span>A:<span class="a">优</span></span>
+			<span>B:<span class="b">良</span></span>
+			<span>C:<span class="c">中</span></span>
+			<span>D:<span class="d">拉黑</span></span>
+		</span>
+		
+		<div>搜索</div>
+		<input type="text" />
+	</div>
+	<div class="gysxx-table">
+		<table>
+			<tr>
+				<th>编号</th>
+				<th>名称</th>
+				<th>等级</th>
+				<th>操作</th>
+			</tr>
+			<tr>
+				<td>900011</td>
+				<td>江西南丰振宇集团</td>
+			
+				<td class='a'>A</td>
+				<td>
+					<a href="供应商-评分详情-A.html" class="view"  target="_blank">查看</a>
+					
+				</td>
+			</tr>
+			<tr>
+				<td>900031</td>
+				<td>升腾资讯有限公司</td>
+			
+				<td class='a'>A</td>
+				<td>
+					<a href="供应商-评分详情-A.html" class="view"  target="_blank">查看</a>
+					
+				</td>
+			</tr>
+			<tr>
+				<td>900026</td>
+				<td>珠海赞同科技有限公司</td>
+			
+				<td class='d'>D</td>
+				<td>
+					<a href="供应商-评分详情-D.html" class="view"  target="_blank">查看</a>
+					
+				</td>
+			</tr>
+			<tr>
+				<td>900008</td>
+				<td>中金金融认证中心有限公司</td>
+			
+				<td class='b'>B</td>
+				<td>
+					<a href="供应商-评分详情-A.html" class="view"  target="_blank">查看</a>
+					
+				</td>
+			</tr>
+			<tr>
+				<td>900003</td>
+				<td>中国移动通信集团江西有限公司</td>
+				
+				<td class='c'>C</td>
+				<td>
+					<a href="供应商-评分详情-A.html" class="view"  target="_blank">查看</a>
+					
+				</td>
+			</tr>
+			<tr>
+				<td>900017</td>
+				<td>聚龙股份有限公司</td>
+		
+				<td class='b'>B</td>
+				<td>
+					<a href="供应商-评分详情-A.html" class="view"  target="_blank">查看</a>
+					
+				</td>
+			</tr>
+			<tr>
+				<td>900030</td>
+				<td>华为终端有限公司</td>
+				
+				<td class='b'>B</td>
+				<td>
+					<a href="供应商-评分详情-A.html" class="view"  target="_blank">查看</a>
+					
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+<div class="w100 ov">
+	<table width="98%" border="0" cellspacing="0" cellpadding="2" align="center"><tbody><tr><td height="35"><div class="pagebox" style="margin:20px 0px 8px 0px;"><span class="pagebox_pre_nolink">首页</span> <span class="pagebox_pre_nolink">上一页</span><span class="pagebox_num_nonce">1</span><span class="pagebox_num"><a href="?page=2&amp;MainType=&amp;LessType=LE114">2</a></span><span class="pagebox_num"><a href="?page=3&amp;MainType=&amp;LessType=LE114">3</a></span><span class="pagebox_num"><a href="?page=4&amp;MainType=&amp;LessType=LE114">4</a></span><span class="pagebox_num"><a href="?page=5&amp;MainType=&amp;LessType=LE114">5</a></span><span class="pagebox_num"><a href="?page=6&amp;MainType=&amp;LessType=LE114">6</a></span><span class="pagebox_num"><a href="?page=7&amp;MainType=&amp;LessType=LE114">7</a></span><span class="pagebox_num"><a href="?page=8&amp;MainType=&amp;LessType=LE114">8</a></span><span class="pagebox_next"><a href="?page=2&amp;MainType=&amp;LessType=LE114">下一页</a></span> <span class="pagebox_next"><a href="?page=27&amp;MainType=&amp;LessType=LE114">尾页</a></span></div></td></tr></tbody></table>
+</div>
+
+
+<script>
+	 
+	$('.search > div').click(function(){
+		$('.gysxx-table tr:first').next().nextAll().remove();
+		$('.pagebox_num').remove();
+		$('.pageall').css('margin-top','180px');
+	})
+	
+	
+	
+	
+	$('.gysxx-table .remove').click(function(){
+		$(this).parents('tr').remove();
+	})
+</script>
+
+

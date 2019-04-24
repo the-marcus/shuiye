@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/style.css" />
+		 <link rel="stylesheet" href="layui/css/layui.css" media="all">
+	</head>
+	<body>
+
+		
+		<!--商城头部-->
+		<div class="wzgysc-head"></div>
+		
+		<div class="w1000 ov">
+			<div class="wzgysc-lsdd">购物车</div>
+
+			
+			
+			
+			<div class="wzgysc-li">
+				<div class="wzgysc-li-title">
+					<span>2018-3-11</span>
+					<div>订单号：3546546874894</div>
+					<div class="wzgysc-li-bm">部门：生产技术中心</div>
+				</div>
+				<div class="wzgysc-li-table">
+					<table>
+						<tr style="background:#efefef;">
+							<th>商品</th>
+					
+							<th>单价</th>
+							<th>数量</th>
+							<th>店铺名</th>
+							<th>总价</th>
+						
+						</tr>
+						<tr>
+							<td>
+								<img src="img/pen3.jpg" class="wzgysc-li-img">
+							
+								<div class="sp-title">派克（PARKER） IM 纯黑丽雅白夹钢笔/墨水笔 </div>
+							</td>
+							<td>
+								5.00
+							</td>
+							<td>
+								5
+							</td>
+							<td>
+								得力办公用品
+								<div class="liuyan">留言</div>
+							</td>
+							<td rowspan="2">
+								50.00
+							</td>
+							
+						</tr>
+						<tr>
+							<td>
+								<img src="img/pen4.jpg" class="wzgysc-li-img">
+							
+								<div class="sp-title">晨光（MG）K35经典办公按动子弹头中性笔签字笔水笔0.5mm12支装 黑色</div>
+							</td>
+							<td>
+								5.00
+							</td>
+							<td>
+								5
+							</td>
+							<td>
+								得力办公用品
+								<div class="liuyan">留言</div>
+							</td>
+						
+							
+						</tr>
+					</table>
+				</div>
+			</div>
+			
+			<div class="w100 ov wzgysc-gwc-submit">
+				<a class="close">取消</a>
+				<a class="tjsq">提交申请</a>
+				
+			</div>
+		</div>
+		
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+<script src="layui/layui.js"></script>
+<script>
+	$(function(){
+		//默认载入页面
+		$('.wzgysc-head').load('物资供应商城-头部.html');
+		
+		
+		
+		
+		
+		
+		$('.liuyan').click(function(){
+			layui.use('layer', function(){
+			  var layer = layui.layer;
+			  layer.open({
+			  	title:'留言信息',
+
+				  type: 1,
+				  area: '300px',
+				  content: "<span style='margin-left:10px;'>暂无留言<span>" ,//这里content是一个DOM，注意：最好该元素要存放在body最外层，否则可能被其它的相对元素所影响，
+				  btn: ['确认', '取消'],
+				  cancle: function(index, layero){
+				    //按钮【按钮一】的回调
+				  },
+				  cancle: function(index, layero){
+				    //按钮【按钮一】的回调
+				  }
+				});
+			}); 
+		})
+		
+		
+		$('.tjsq').click(function(){
+			layui.use('layer', function(){
+			  var layer = layui.layer;
+			  layer.open({
+			  	title:'提交申请',
+
+				  type: 1,
+				  area: '300px',
+				  content: "<span style='margin-left:10px;color:#ff0000;'>提交成功！<span>" ,//这里content是一个DOM，注意：最好该元素要存放在body最外层，否则可能被其它的相对元素所影响，
+				  btn: ['确认'],
+				  cancle: function(index, layero){
+				    //按钮【按钮一】的回调
+				  }
+				});
+			}); 
+		})
+	})
+</script>

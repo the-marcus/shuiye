@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/style.css" />
+		 <link rel="stylesheet" href="layui/css/layui.css" media="all">
+	</head>
+	<body>
+
+		
+		<!--商城头部-->
+		<div class="head"></div>
+		
+		<div class="w1000 ov">
+			
+			<div class="wzgysc-xq">
+				<img src="img/printerdetail.jpg" class="wzgysc-xq-img">
+				<div class="wzgysc-xq-sx">
+					<div class="wzgysc-xq-sx-t">惠普（HP）M1136 多功能三合一黑白激光一体机 （打印 复印 扫描）</div>
+					<div class="wzgysc-xq-sx-txt">售价：1199元</div>
+					<div class="wzgysc-xq-sx-txt">编号：216237</div>
+					<div class="wzgysc-xq-sx-txt">品牌：惠普</div>
+					<div class="wzgysc-xq-sx-txt">多功能：打印/复印/扫描</div>
+					<div class="wzgysc-xq-sx-txt">商品毛重：9.8kg</div>
+					
+					<div class="wzgysc-xq-sx-txt">供应商：江西南丰振宇集团</div>
+				</div>
+			</div>
+			
+			<div class="wzgysc-xq-contents-title">商品详情</div>
+			<div class="wzgysc-xq-contents">
+				<div class="wzgysc-xq-contents-cs">
+					<div>型号：M1136</div>
+					<div>打印速度：高达 18 ppm</div>
+					<div>打印幅面：A4 幅面</div>
+					<div>打印质量：分辨率高达 600 x 600 dpi（1200 dpi 有效）</div>
+					<div>电源：220 到 240 伏交流电 (+/- 10%)、50/60 赫兹（+/- 2 赫兹）</div>
+					<div>尺寸：415 x 265 x 250 毫米</div>
+					<div>尺寸：415 x 265 x 250 毫米</div>
+					<div>支持纸张尺寸：支持的介质尺寸 A4; A5; ISO B5; ISO C5; ISO C5/6; ISO C6; ISO DL; 16K; 欧洲明信片; J 明信片 (Hagaki); J 双面明信片 (Oufuku Hagaki)</div>
+					<div>特性：支持的介质类型 纸张（普通纸、激光打印纸）、信封、投影胶片、标签、卡片、明信片</div>
+				</div>
+				<img src="img/printerdetail_23.jpg" />
+				<img src="img/printerdetail_24.jpg" />
+				<img src="img/printerdetail_25.jpg" />
+				<img src="img/printerdetail_26.jpg" />
+				<img src="img/printerdetail_27.jpg" />
+			</div>
+			
+		</div>
+		
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+<script src="layui/layui.js"></script>
+<script>
+	$(function(){
+		//默认载入页面
+		$('.head').load('头部-供应商.html');
+		
+		
+		$('.wzgysc-plus').click(function(){
+			var i=$('.wzgysc-xq-input').val();
+			i++;
+			$('.wzgysc-xq-input').val(i);
+		})
+		
+		$('.wzgysc-min').click(function(){
+			var i=$('.wzgysc-xq-input').val();
+			if(i<=1){
+				i=1;
+			}else{
+				i--;
+			}
+			
+			$('.wzgysc-xq-input').val(i);
+		})
+		
+		
+		
+		$('.wzgysc-xq-gwc-join').click(function(){
+			layui.use('layer', function(){
+			  var layer = layui.layer;
+			  layer.open({
+			  	title:'提示',
+
+				  type: 1,
+				 area: '250px',
+				  content: "<div style='padding:10px;'><span style='margin-left:10px;'>商品添加成功<span><a href='http://baidu.com' style='color:#ff0000;margin-left:10px;'>商品添加成功<a></div>" //这里content是一个DOM，注意：最好该元素要存放在body最外层，否则可能被其它的相对元素所影响，
+				  ,
+				  btn: ['确认'],
+				  cancle: function(index, layero){
+				    //按钮【按钮一】的回调
+				  }
+				 
+				});
+			}); 
+		})
+	})
+</script>

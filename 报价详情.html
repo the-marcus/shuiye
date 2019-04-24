@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="layui/css/layui.css" media="all">
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+				border: 0;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			
+			textarea {
+				resize: none;
+			}
+			
+			span,
+			a,
+			input,
+			div,
+			textarea {
+				box-sizing: border-box;
+				text-decoration: none;
+			}
+			
+			.w1000 {
+				width: 1000px;
+				margin: 0 auto;
+			}
+			
+			.w100 {
+				width: 100%;
+			}
+			
+			.ov {
+				overflow: hidden;
+			}
+			
+			.cgsq {
+				width: 100%;
+				overflow: hidden;
+			}
+			
+			.cgsq-table {
+				width: 100%;
+				position: relative;
+			}
+			
+			.cgsq-table>table {
+				border-top: 1px solid #ccc;
+				width: 100%;
+				border-left: 1px solid #ccc;
+			}
+			
+			.cgsq-table>table th {
+				border-bottom: 1px solid #ccc;
+				border-right: 1px solid #ccc;
+				text-align: center;
+				height: 30px;
+				line-height: 30px;
+				background: #def6ff;
+				width: calc(100%/6);
+			}
+			
+			.cgsq-table>table td {
+				border-bottom: 1px solid #ccc;
+				border-right: 1px solid #ccc;
+				text-align: center;
+				height: 30px;
+				line-height: 30px;
+				width: calc(100%/6);
+			}
+			
+			.cgsq-table>table td input {
+				width: 100px;
+			}
+			.cgsq-title{width:100%;overflow: hidden;height:30px;line-height:30px;font-size:14px;background:#eaeaea;padding-left:10px;}
+			.cgsq-contents{width:100%;overflow: hidden;font-size:12px;}
+			.cgsq-contents table{border:1px solid #ccc;}
+			.cgsq-contents table,.cgsq-contents tr{width:100%;}
+			.cgsq-contents th,.cgsq-contents td{height:30px;line-height:30px;border-right:1px solid #ccc;border-bottom:1px solid #ccc;text-align: center;}
+			.cgsq-contents th{background:#def6ff;}
+			.cgsq-contents td{}
+			.time{width:10%;}
+		</style>
+	</head>
+
+	<body>
+		<!--头部页面-->
+		<div class="head"></div>
+		<div class="w1000 ov">
+			<div class="xjxm-top" style='background:none;'>
+				<div class="xjxm-txt" style="font-size:20px;color:#0F88E1;">
+					企业名称：聚龙股份有限公司<a href="1-工作人员查看供应商.html" style='font-size:12px;color:#FF0000;' target="_blank">[点击查看]</a>
+					<div style='width:230px;float:right;'>
+						<div style="height:30px;line-height:30px;margin-right:10px;float:left;font-size:18px;color:#007DDB;font-weight: bold;">评分:</div>
+						<input type="text" style="display:block;float:left;width:80px;height:30px;line-height:30px;text-align: center;border:1px solid #ccc;margin-right:10px;">
+						<a class="next" style="width:80px;cursor:pointer;float:left;height:30px;line-height:30px;background:#007DDB;text-align: center;color:#fff;font-size:14px;">保存</a>
+					</div>
+				</div>
+				
+			</div>
+			<div class="xjxm-top" style="margin-bottom: 10px;">
+				<div class="xjxm-txt">首次报价时间：2018-3-15</div>
+				<div class="xjxm-txt">响应速度：较快</div>
+			</div>
+			<div class="cgsq-title" style="font-size: 19px;font-weight: bold;">报价表</div>
+			<div class="cgsq ov">
+				<div class="cgsq-table">
+					<table>
+						<tr>
+							<th>编号</th>
+							<th>商品名称</th>
+							<th>规格型号</th>
+							<th>单位</th>
+							<th>数量</th>
+							<th>单价</th>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>挂机空调</td>
+							<td>1.5P</td>
+							<td>台</td>
+							<td>6</td>
+							<td>2000</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>柜机空调</td>
+							<td>3P</td>
+							<td>台</td>
+							<td>5</td>
+							<td>4600</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>打印机</td>
+							<td>商用黑白打印机</td>
+							<td>台</td>
+							<td>1</td>
+							<td>1500</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>投影机</td>
+							<td>高清投影机</td>
+							<td>台</td>
+							<td>1</td>
+							<td>2000</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="cgsq-title" style="margin-top:20px; font-size: 19px;font-weight: bold;">修改历史</div>
+			<div class="cgsq-contents">
+				<table>
+					<tr>
+						<th class="time">修改时间</th>
+						<th>修改内容</th>
+					</tr>
+					<tr>
+						<td>2018-12-13</td>
+						<td>“挂机空调”的单价从2300更改为2000</td>
+					</tr>
+					<tr>
+						<td>2018-12-14</td>
+						<td>“打印机”的单价从1700更改为1500</td>
+					</tr>
+					<tr>
+						<td>2018-12-15</td>
+						<td>“投影机”的价格从2100更改为2000</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+<script src="layui/layui.js"></script>
+<script>
+	$(function(){
+		//默认载入页面
+		$('.head').load('头部-工作人员.html');
+		
+		$('.exit').click(function(){
+			window.close();
+		})
+		
+		
+	})
+</script>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="layui/css/layui.css" media="all">
+		<style>
+			#t2,#t3{display: none;}
+				.cgsq{width:100%;overflow: hidden;}
+.cgsq-table{width:100%;position: relative;}
+.cgsq-table > table{border-top:1px solid #ccc;width:100%;border-left:1px solid #ccc;}
+.cgsq-table > table th{border-bottom:1px solid #ccc;border-right:1px solid #ccc;text-align: center;height:30px;line-height:30px;background:#def6ff;width:calc(100%/6);}
+.cgsq-table > table td{border-bottom:1px solid #ccc;border-right:1px solid #ccc;text-align: center;height:30px;line-height:30px;width:calc(100%/6);}
+.cgsq-table > table td input{width:100px;}
+
+.cgsq-table2{width:100%;position: relative;}
+.cgsq-table2 > table{border-top:1px solid #ccc;width:100%;border-left:1px solid #ccc;}
+.cgsq-table2 > table th{border-bottom:1px solid #ccc;border-right:1px solid #ccc;text-align: center;height:30px;line-height:30px;background:#def6ff;width:calc(100%/6);}
+.cgsq-table2 > table td{border-bottom:1px solid #ccc;border-right:1px solid #ccc;text-align: center;height:30px;line-height:30px;width:calc(100%/6);}
+.cgsq-table2 > table td input{width:100px;}
+.save{float:right;padding:5px 10px;background:#02CC42;color: #fff;text-align: center;}
+.xjxm-select2,.xjxm-select3,.xjxm-select4{border:1px solid #ccc;height:30px;line-height:30px;text-align: center;float:left;}
+.xjxm-select3,.xjxm-select4{display: none;}
+.show{display: block !important;}
+		</style>
+	</head>
+	<body>
+		<!--头部页面-->
+		<div class="head"></div>
+		
+		<div class="w1000 ov xjxm">
+			<div class="xjxm-top">
+				<div class="xjxm-txt">项目名称：项目2</div>
+				<div class="xjxm-txt">创建日期：2018-3-15</div>
+				<div class="xjxm-txt">需求部门：生产技术部</div>
+				<div class="xjxm-txt">审核状态：<span style="color:#333;">待审核</span></div>
+				<div class="xjxm-txt">项目进度：待审核</div>
+			</div>
+			
+			<div style="width:100%;margin-top:20px;">
+				<div class="qyzz-table-title">
+					<span style="font-weight: bold;font-size:14px;color:#007DDB;">项目明细</span>
+				</div>
+				<div class="cgsq ov">
+					<div class="cgsq-table">
+						<table>
+							<tr>
+								<th>编号</th>
+								<th>商品名称</th>
+								<th>规格型号</th>
+								<th>单位</th>
+								<th>数量</th>
+								<th>备注</th>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>挂机空调</td>
+								<td>1.5P</td>
+								<td>台</td>
+								<td>6</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>柜机空调</td>
+								<td>3P</td>
+								<td>台</td>
+								<td>5</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>打印机</td>
+								<td>商用黑白打印机</td>
+								<td>台</td>
+								<td>1</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>投影机</td>
+								<td>高清投影机</td>
+								<td>台</td>
+								<td>1</td>
+								<td></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			
+		
+			<div class="xjxm-time">
+				<div>起始时间：</div>
+				<input type="text" id="test1" value="2018-02-08">
+				<div>至</div>
+				<input type="text" id="test2" value="2018-04-04">
+				
+			</div>
+			<div class="w100 ov">
+				<div class="qyzz-table-title"><span style="font-weight: bold;font-size:14px;color:#007DDB;">询价须知</span></div>
+				<div class="w100 ov">
+					<div contenteditable="true" style="width:100%;border:1px solid #ccc;padding:10px;resize: none;height:200px;overflow-y:auto;">
+						<div class="w100 ov">1、询价响应供应商报价时须写明单价及总价、产品的详细配置参数；报价包含货物制造、运输、安装调试、售后服务及技术培训等交付采购人使用前所有可能发生的费用</div> 
+						<div class="w100 ov">2、交货地点：江西洪城水业股份有限公司</div> 
+						<div class="w100 ov">3、询价响应文件递交截止时间：</div> 
+						<div class="w100 ov">4、（1）交货期：必须承诺       （2）质保期：必须承诺6年</div> 
+						<div class="w100 ov">5、付款条件及方法：货到经安检验收合格后，买方付清设备总价（含铜管加装）</div> 
+						<div class="w100 ov">6、询价响应文件应由下列部分构成：报价表、明细表、营业执照复印件、供应商认为需要 说明的其他内容（以上材料均需加盖公章）。</div> 
+					</div>
+				</div>
+				<div class="w100 ov">
+					<div class="save" >保存</div>
+				</div>
+			</div>
+			<div class="qyzz-table">
+				<div class="qyzz-table-title"><span style="font-weight: bold;font-size:14px;color:#007DDB;">已指定的供应商</span>
+					<span style="float:right;">
+						<div target="_blank" class="xjxm-plus" style="display:block;height:30px;line-height:30px;text-align:center;width:150px;float:right;font-size:12px;background:#2f5995;color:#fff;">添加</div>
+					
+						<select class="xjxm-select">
+							<option>供应商选择</option>
+							<option>上海南天电脑系统有限公司</option>
+							<option>福建实达集团股份有限公司</option>
+							<option>戴尔(中国)有限公司</option>
+							<option>华为终端有限公司</option>
+							<option>中金金融认证中心有限公司</option>
+							<option>安永(中国)企业咨询有限公司</option>
+							<option>中铁信息工程集团有限公司</option>
+						</select>
+					</span>
+					
+				</div>
+					<table class="xjxm-table">
+						<tr>
+							<th>编号</th>
+							<th>供应商名称</th>
+							
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>江西格力空调销售有限公司</td>
+							
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>中国惠普有限公司江西分公司</td>
+							
+						</tr>
+						
+					</table>
+			</div>
+			
+			
+			<div class="qyzz-table">
+				<div class="qyzz-table-title"><span style="font-weight: bold;font-size:14px;color:#007DDB;">项目组成员</span>
+					<span style="float:right;">
+						<div target="_blank" class="xjxm-plus2" style="display:block;height:30px;line-height:30px;text-align:center;width:150px;float:right;font-size:12px;background:#2f5995;color:#fff;">添加</div>
+						<div style="float:left;height:30px;line-height:30px;margin-right:10px;">部门:</div>
+						<select class="xjxm-select2">
+							<option value="1">资产部</option>
+							<option value="2">经理</option>
+						</select>
+						<div  style="float:left;height:30px;line-height:30px;margin-right:10px;margin-left:10px;">姓名:</div>
+						<select class="xjxm-select3 show">
+							<option>张三</option>
+							<option>李四</option>
+							<option>王五</option>
+						</select>
+						<select class="xjxm-select4" style="display: none;">
+							<option>张经理</option>
+							<option>李经理</option>
+							<option>王经理</option>
+						</select>
+					</span>
+					
+				</div>
+					<table class="xjxm-table2">
+						<tr>
+							<th>编号</th>
+							<th>姓名</th>
+							<th>审核状态</th>
+							
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>刘经理</td>
+							<td>未审核</td>
+							
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>刘阳</td>
+							<td>未审核</td>
+							
+						</tr>
+						
+					</table>
+			</div>
+			<div class="tip">提示：点击保存后自动向新添加的供应商发送通知</div>
+			<div class="gys-submit" style="margin-top:10px;">
+				<div>
+					<a class="next" style="width:110px;">保存</a>
+					<a href="#" class="close">取消</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+<script src="layui/layui.js"></script>
+<script>
+	$(function(){
+		
+		$('.xjxm-select2').click(function(){
+			var seltxt=$('.xjxm-select2 option:selected').val();
+			if(seltxt=='1'){
+				$('.xjxm-select3').addClass('show');
+				$('.xjxm-select4').removeClass('show');
+			}else{
+				$('.xjxm-select4').addClass('show');
+				$('.xjxm-select3').removeClass('show');
+			}
+		})
+		
+		
+		
+		$('.zj').click(function(){//显示总价排行
+			$('#t1,#t3').hide();
+			$('#t2').show();
+		})
+		$('.pf').click(function(){//显示评分排行
+			$('#t1,#t2').hide();
+			$('#t3').show();
+		})
+		
+		
+		//默认载入页面
+		$('.head').load('头部-工作人员.html');
+		$('.nav > a').outerWidth($('.nav').outerWidth()/$('.nav > a').size());
+		
+		
+		$('.xjxm-plus').click(function(){
+			var i=$('.xjxm-select option:selected').text();
+			
+			var num=$('.xjxm-table tr:last td:first').text();
+			num++;
+			
+			var txt="<tr><td>"+num+"</td><td>"+i+"</td></tr>";
+			$('.xjxm-table tr:last').after(txt);
+		})
+		
+		$('.xjxm-plus2').click(function(){
+			var i=$('.show option:selected').text();
+			
+			var num=$('.xjxm-table2 tr:last td:first').text();
+			num++;
+			
+			var txt="<tr><td>"+num+"</td><td>"+i+"</td><td>未审核</td></tr>";
+			$('.xjxm-table2 tr:last').after(txt);
+		})
+		
+		
+		
+		$('.test2').click(function(){
+			$('#test2').val('2018-03-19');
+		})
+	})
+	
+		$('.pop1').click(function(){
+			layui.use('layer', function(){
+				  var layer = layui.layer;
+				  layer.open({
+				  	title:'提示',
+				  	 area: '200px',
+					  type: 1,
+					  content: '<span style="margin-left:10px;">发起到期预警成功!</span>' ,//这里content是一个DOM，注意：最好该元素要存放在body最外层，否则可能被其它的相对元素所影响，
+					  btn: ['确认'],
+					  cancle: function(index, layero){
+					    //按钮【按钮一】的回调
+					  }
+					});
+			}); 
+		})
+		
+		$('.pop2').click(function(){
+			layui.use('layer', function(){
+				  var layer = layui.layer;
+				  layer.open({
+				  	title:'提示',
+				  	 area: '200px',
+					  type: 1,
+					  content: '<span style="margin-left:10px;">立即停止询价成功!</span>' ,//这里content是一个DOM，注意：最好该元素要存放在body最外层，否则可能被其它的相对元素所影响，
+					  btn: ['确认'],
+					  cancle: function(index, layero){
+					    //按钮【按钮一】的回调
+					  }
+					});
+			}); 
+		})
+		
+		$('.gys-submit .next').click(function(){
+			layui.use('layer', function(){
+				  var layer = layui.layer;
+				  layer.open({
+				  	title:'提示',
+				  	 area: '200px',
+					  type: 1,
+					  content: '<span style="margin-left:10px;">保存成功!</span>' ,//这里content是一个DOM，注意：最好该元素要存放在body最外层，否则可能被其它的相对元素所影响，
+					  btn: ['确认'],
+					  cancle: function(index, layero){
+					    //按钮【按钮一】的回调
+					  }
+					});
+			}); 
+		})
+	
+	
+	$('.save').click(function(){
+			layui.use('layer', function(){
+				  var layer = layui.layer;
+				  layer.open({
+				  	title:'提示',
+				  	 area: '200px',
+					  type: 1,
+					  content: '<span style="margin-left:10px;">保存成功!</span>' ,//这里content是一个DOM，注意：最好该元素要存放在body最外层，否则可能被其它的相对元素所影响，
+					  btn: ['确认'],
+					  cancle: function(index, layero){
+					    //按钮【按钮一】的回调
+					  }
+					});
+			}); 
+		})
+	
+	layui.use('laydate', function(){
+	  var laydate = layui.laydate;
+	  
+	  //成立时间选择
+	  laydate.render({
+	    elem: '#test1' //指定ID
+	    ,type: 'date'
+	  });
+	  
+	  //有效期选择
+	  laydate.render({
+	    elem: '#test2' //指定ID
+	    ,type: 'date'
+	  });
+	});
+</script>

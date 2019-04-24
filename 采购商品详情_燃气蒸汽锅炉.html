@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/style.css" />
+		 <link rel="stylesheet" href="layui/css/layui.css" media="all">
+	</head>
+	<body>
+
+		
+		<!--商城头部-->
+		<div class="head"></div>
+		
+		<div class="w1000 ov">
+			
+			<div class="wzgysc-xq">
+				<img src="img/zhengqilu_title.jpg" class="wzgysc-xq-img">
+				<div class="wzgysc-xq-sx">
+					<div class="wzgysc-xq-sx-t">华炉一号节能燃气商用蒸汽发生器煮豆浆机酿酒锅炉蒸馒头机壁挂炉</div>
+					<div class="wzgysc-xq-sx-txt">售价：3600.00元</div>
+					<div class="wzgysc-xq-sx-txt">编号：1999081</div>
+					<div class="wzgysc-xq-sx-txt">品牌：华炉一号</div>
+					<div class="wzgysc-xq-sx-txt">型号: 30火排</div>
+					<div class="wzgysc-xq-sx-txt">生产厂家: 铁坚节能厨具设备有限公司</div>
+					<div class="wzgysc-xq-sx-txt">蒸发量: 65kg/H</div>
+					<div class="wzgysc-xq-sx-txt">供应商：江西南丰振宇集团</div>
+				</div>
+			</div>
+			
+			<div class="wzgysc-xq-contents-title">商品详情</div>
+			<div class="wzgysc-xq-contents">
+				<div class="wzgysc-xq-contents-cs">
+					<div>产品类型: 挂墙式蒸汽炉（30火排）</div>
+					<div>产品功能:全自动 2分多钟上蒸汽，自动进水，防干烧</div>
+					<div>产品能耗:液化气3.4kg/H天然气4.5m?/H</div>
+				</div>
+				<img src="img/zhengqilu_1.jpg" />
+				<img src="img/zhengqilu_2.jpg" />
+				<img src="img/zhengqilu_3.jpg" />
+				
+			</div>
+			
+		</div>
+		
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+<script src="layui/layui.js"></script>
+<script>
+	$(function(){
+		//默认载入页面
+		$('.head').load('头部-供应商.html');
+		
+		
+		$('.wzgysc-plus').click(function(){
+			var i=$('.wzgysc-xq-input').val();
+			i++;
+			$('.wzgysc-xq-input').val(i);
+		})
+		
+		$('.wzgysc-min').click(function(){
+			var i=$('.wzgysc-xq-input').val();
+			if(i<=1){
+				i=1;
+			}else{
+				i--;
+			}
+			
+			$('.wzgysc-xq-input').val(i);
+		})
+		
+		
+		
+		$('.wzgysc-xq-gwc-join').click(function(){
+			layui.use('layer', function(){
+			  var layer = layui.layer;
+			  layer.open({
+			  	title:'提示',
+
+				  type: 1,
+				 area: '250px',
+				  content: "<div style='padding:10px;'><span style='margin-left:10px;'>商品添加成功<span><a href='http://baidu.com' style='color:#ff0000;margin-left:10px;'>商品添加成功<a></div>" //这里content是一个DOM，注意：最好该元素要存放在body最外层，否则可能被其它的相对元素所影响，
+				  ,
+				  btn: ['确认'],
+				  cancle: function(index, layero){
+				    //按钮【按钮一】的回调
+				  }
+				 
+				});
+			}); 
+		})
+	})
+</script>

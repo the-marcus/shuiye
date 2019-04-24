@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/style.css" />
+		<style>
+			.gys-reg{text-align: center;}
+			.gys-reg > div{display:inline-block;}
+			.gys-reg-from{width:300px;}
+			.gys-reg-title{font-size:14px;width:60px;}
+		</style>
+	</head>
+	<body>
+		<!--头部页面-->
+		<div class="head"></div>
+		
+		<div class="w1000 ov gys">
+			<div class="gys-reg ov">
+				<div>
+					<div class="gys-reg-title">注册码</div>
+					<div class="gys-reg-from">
+						<input type="text" style="width:100%;">
+					</div>
+				</div>
+				
+			</div>
+			
+			<div class="gys-reg ov">
+				<div>
+					<div class="gys-reg-title">账号</div>
+					<div class="gys-reg-from">
+						<input type="text" style="width:100%;">
+					</div>
+				</div>
+			</div>
+			<div class="gys-reg ov">
+				<div>
+					<div class="gys-reg-title">密码</div>
+					<div class="gys-reg-from">
+						<input type="text" style="width:100%;">
+					</div>
+				</div>
+			</div>
+			<div class="gys-reg ov">
+				<div>
+					<div class="gys-reg-title">确认密码</div>
+					<div class="gys-reg-from">
+						<input type="text" style="width:100%;">
+					</div>
+				</div>
+			</div>
+			
+			<div class="gys-submit">
+				<div>
+					<a href="#" class="next">确定</a>
+					<a href="#" class="close">取消</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+<script>
+	$(function(){
+		//默认载入页面
+		$('.head').load('头部-登录-供应商.html');
+		$('.nav > a').outerWidth($('.nav').outerWidth()/$('.nav > a').size());
+	})
+</script>

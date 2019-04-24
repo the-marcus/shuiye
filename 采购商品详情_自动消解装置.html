@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/style.css" />
+		 <link rel="stylesheet" href="layui/css/layui.css" media="all">
+	</head>
+	<body>
+
+		
+		<!--商城头部-->
+		<div class="head"></div>
+		
+		<div class="w1000 ov">
+			
+			<div class="wzgysc-xq">
+				<img src="img/cod_title.jpg" class="wzgysc-xq-img">
+				<div class="wzgysc-xq-sx">
+					<div class="wzgysc-xq-sx-t">HCA-101标准COD消解器12孔 自动消解回流仪 标准消解回流装置</div>
+					<div class="wzgysc-xq-sx-txt">售价：3300.00元</div>
+					<div class="wzgysc-xq-sx-txt">编号：2006033</div>
+					<div class="wzgysc-xq-sx-txt">品牌：双诚</div>
+					<div class="wzgysc-xq-sx-txt">供应商：江西南丰振宇集团</div>
+				</div>
+			</div>
+			
+			<div class="wzgysc-xq-contents-title">商品详情</div>
+			<div class="wzgysc-xq-contents">
+				<div class="wzgysc-xq-contents-cs">
+					<div>货号: 标准COD消解器</div>
+					<div>测量范围：5～700mg/l； 700mg/l～10000mmg/l水样稀释后测定。</div>
+					<div>消解时间：10分钟～2小时30分钟[用户可自主选择加热时间]</div>
+					<div>测量误差：邻苯二甲酸氢钾标准溶液（500mg/l）相对标准偏差不大于5.0%；工业有机废水（500mg/l]）相对标准偏差不大于8.0%</div>
+					<div>环境温度：≤35度</div>
+					<div>消解样品数：12个180ml直形瓶，分三排同时加热消解</div>
+					<div>加热功率：≤850W（AC ：220V；50HZ）</div>
+					<div>仪器尺寸：400＊280＊625mm</div>
+					<div>重    量：17KG</div>
+					
+					<div></div>
+					<div>HCA-100型标准COD消解装置，采用微机技术，合理的设计，可对12个150ml的直形瓶同时进行加热消解。完全遵照HJ+828+2017国家标准方法，
+						选用优质的电炉丝加热，正确的加热功率，微沸2个小时。，本公司专业生产环保分析仪器。已有10年的生产经验。请新老客户放心购买</div>
+		
+				</div>
+				<img src="img/cod_1.jpg" />
+				<img src="img/cod_2.jpg" />
+				<img src="img/cod_3.jpg" />
+			</div>
+			
+		</div>
+		
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+<script src="layui/layui.js"></script>
+<script>
+	$(function(){
+		//默认载入页面
+		$('.head').load('头部-供应商.html');
+		
+		
+		$('.wzgysc-plus').click(function(){
+			var i=$('.wzgysc-xq-input').val();
+			i++;
+			$('.wzgysc-xq-input').val(i);
+		})
+		
+		$('.wzgysc-min').click(function(){
+			var i=$('.wzgysc-xq-input').val();
+			if(i<=1){
+				i=1;
+			}else{
+				i--;
+			}
+			
+			$('.wzgysc-xq-input').val(i);
+		})
+		
+		
+		
+		$('.wzgysc-xq-gwc-join').click(function(){
+			layui.use('layer', function(){
+			  var layer = layui.layer;
+			  layer.open({
+			  	title:'提示',
+
+				  type: 1,
+				 area: '250px',
+				  content: "<div style='padding:10px;'><span style='margin-left:10px;'>商品添加成功<span><a href='http://baidu.com' style='color:#ff0000;margin-left:10px;'>商品添加成功<a></div>" //这里content是一个DOM，注意：最好该元素要存放在body最外层，否则可能被其它的相对元素所影响，
+				  ,
+				  btn: ['确认'],
+				  cancle: function(index, layero){
+				    //按钮【按钮一】的回调
+				  }
+				 
+				});
+			}); 
+		})
+	})
+</script>

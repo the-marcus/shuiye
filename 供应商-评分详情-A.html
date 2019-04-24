@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="layui/css/layui.css" media="all">
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+				border: 0;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			
+			textarea {
+				resize: none;
+			}
+			
+			span,
+			a,
+			input,
+			div,
+			textarea {
+				box-sizing: border-box;
+				text-decoration: none;
+			}
+			
+			.w1000 {
+				width: 1000px;
+				margin: 0 auto;
+			}
+			
+			.w100 {
+				width: 100%;
+			}
+			
+			.ov {
+				overflow: hidden;
+			}
+			
+			.cgsq {
+				width: 100%;
+				overflow: hidden;
+			}
+			
+			.cgsq-table {
+				width: 100%;
+				position: relative;
+			}
+			
+			.cgsq-table>table {
+				border-top: 1px solid #ccc;
+				width: 100%;
+				border-left: 1px solid #ccc;
+			}
+			
+			.cgsq-table>table th {
+				border-bottom: 1px solid #ccc;
+				border-right: 1px solid #ccc;
+				text-align: center;
+				height: 30px;
+				line-height: 30px;
+				background: #def6ff;
+				width: calc(100%/6);
+			}
+			
+			.cgsq-table>table td {
+				border-bottom: 1px solid #ccc;
+				border-right: 1px solid #ccc;
+				text-align: center;
+				height: 30px;
+				line-height: 30px;
+				width: calc(100%/6);
+			}
+			
+			.cgsq-table>table td input {
+				width: 100px;
+			}
+			.cgsq-title{width:100%;overflow: hidden;height:30px;line-height:30px;font-size:14px;background:#eaeaea;padding-left:10px;}
+			.cgsq-contents{width:100%;overflow: hidden;font-size:12px;}
+			.cgsq-contents table{border:1px solid #ccc;}
+			.cgsq-contents table,.cgsq-contents tr{width:100%;}
+			.cgsq-contents th,.cgsq-contents td{height:30px;line-height:30px;border-right:1px solid #ccc;border-bottom:1px solid #ccc;text-align: center;}
+			.cgsq-contents th{background:#def6ff;}
+			.cgsq-contents td{}
+			.time{width:10%;}
+			
+			
+			.sumli input{text-align: center;}
+		</style>
+	</head>
+
+	<body>
+		<!--头部页面-->
+		<div class="head"></div>
+		<div class="w1000 ov">
+			<div class="xjxm-top" style='background:none;'>
+				<div class="xjxm-txt" style="font-size:20px;color:#0F88E1;">
+					企业名称：江西南丰振宇集团<a href="1-工作人员查看供应商.html" style='font-size:12px;color:#FF0000;' target="_blank">[点击查看]</a>
+					
+				</div>
+				
+			</div>
+			<div class="xjxm-top" style="margin-bottom: 10px;">
+				<div class="xjxm-txt">评分等级：A</div>
+				<div class="xjxm-txt">首次报价时间：2018-3-15</div>
+				<div class="xjxm-txt">响应速度：较快</div>
+			</div>
+			<div class="cgsq-title" style="font-size: 20px; font-weight: bold;">评分明细</div>
+			<div class="cgsq ov">
+				<div class="cgsq-table">
+					<table>
+						<tr>
+							<th>项目</th>
+							<th>产品质量</th>
+							<th>报价阶段</th>
+							<th>交货响应</th>
+							<th>售后服务</th>
+							<th>总分</th>
+						</tr>
+						
+						<tr class="sumli">
+							<td>分数</td>
+							<td><input type="text" class="f1" value="9"></td>
+							<td><input type="text" class="f2" value="8"></td>
+							<td><input type="text" class="f3" value="9"></td>
+							<td><input type="text" class="f4" value="8"></td>
+							<td class="sum"></td>
+						</tr>
+						
+					</table>
+				</div>
+			</div>
+			
+		</div>
+		
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+<script src="layui/layui.js"></script>
+<script>
+	$(function(){
+		//默认载入页面
+		$('.head').load('头部-工作人员.html');
+		
+		$('.exit').click(function(){
+			window.close();
+		})
+		
+		var f1=parseInt($('.f1').val())*0.4;
+			var f2=parseInt($('.f2').val())*0.1;
+			var f3=parseInt($('.f3').val())*0.1;
+			var f4=parseInt($('.f4').val())*0.4;
+			
+			var num=f1+f2+f3+f4;
+			$('.sum').text(num.toFixed(1));
+		
+		
+		$('.sumli').bind('input propertychange',function(){
+			var f1=parseInt($('.f1').val())*0.4;
+			var f2=parseInt($('.f2').val())*0.1;
+			var f3=parseInt($('.f3').val())*0.1;
+			var f4=parseInt($('.f4').val())*0.4;
+			
+			var num=f1+f2+f3+f4;
+			$('.sum').text(num.toFixed(1));
+		})
+		
+
+		
+	})
+</script>

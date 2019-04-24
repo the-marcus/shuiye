@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<!--头部页面-->
+		<div class="head"></div>
+		
+		<div class="w1000 ov gys">
+			<div class="gys-reg ov">
+				<div class="gys-reg-title">公司名称</div>
+				<div class="gys-reg-from">
+					<input type="text" style="width:100%;">
+				</div>
+			</div>
+			<div class="gys-reg ov">
+				<div class="gys-reg-title">公司地址</div>
+				<div class="gys-reg-from">
+					<select>
+						<option>选择</option>
+					</select>
+					<div>省/直辖市</div>
+					<select>
+						<option>选择</option>
+					</select>
+					<select>
+						<option>选择</option>
+					</select>
+				</div>
+			</div>
+			<div class="gys-reg ov">
+				<div class="gys-reg-title">详细地址</div>
+				<div class="gys-reg-from">
+					<input type="text" style="width:100%;">
+				</div>
+			</div>
+			<div class="gys-reg ov">
+				<div class="gys-reg-title">邮政编码</div>
+				<div class="gys-reg-from">
+					<input type="text" style="width:20%;">
+				</div>
+			</div>
+			<div class="gys-reg ov">
+				<div class="gys-reg-title">公司简称</div>
+				<div class="gys-reg-from">
+					<input type="text" style="width:20%;">
+				</div>
+			</div>
+			<div class="gys-reg ov">
+				<div class="gys-reg-title">总经理</div>
+				<div class="gys-reg-from">
+					<input type="text" style="width:20%;">
+				</div>
+			</div>
+			<div class="gys-reg ov">
+				<div class="gys-reg-title">总经理电话</div>
+				<div class="gys-reg-from">
+					<input type="text" style="width:20%;">
+				</div>
+			</div>
+			<div class="gys-reg ov">
+				<div class="gys-reg-title">业务代表</div>
+				<div class="gys-reg-from">
+					<input type="text" style="width:20%;">
+				</div>
+			</div>
+			<div class="gys-reg ov">
+				<div class="gys-reg-title">业务代表电话</div>
+				<div class="gys-reg-from">
+					<input type="text" style="width:20%;">
+				</div>
+			</div>
+			<div class="gys-reg ov">
+				<div class="gys-reg-title">注册资本</div>
+				<div class="gys-reg-from">
+					<select>
+						<option>人民币</option>
+					</select>
+					<input type="text" style="width:30%;">
+					<div>万元</div>
+				</div>
+			</div>
+			<div class="gys-reg ov">
+				<div class="gys-reg-title">合作商类型</div>
+				<div class="gys-reg-from">
+					<input type="text" style="width:80%;">
+					<button>选择</button>
+				</div>
+			</div>
+			<div class="gys-submit">
+				<div>
+					<a href="#" class="next">确定</a>
+					<a href="#" class="close">取消</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+<script>
+	$(function(){
+		//默认载入页面
+		$('.head').load('头部-供应商.html');
+		$('.nav > a').outerWidth($('.nav').outerWidth()/$('.nav > a').size());
+	})
+</script>

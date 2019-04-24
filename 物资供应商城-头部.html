@@ -1,0 +1,49 @@
+
+		<div class="head"></div>
+		<div class="w100 ov" style="background:url(img/banner-bg.gif) no-repeat;">
+			<div class="w1000 ov" style="padding-top:20px;">
+				<div class="wzgysc-logo">物资供应商城</div>
+				<div class="wzgysc-search">
+					<div class="wzgysc-search-input">
+						<input type="text" value="笔">
+						<a href="物资供应商城-搜索结果.html" style="color: #FFFFFF; background:#ebb107;">搜商品</a>
+						<a href="物资供应商城-店铺.html" style="color: #FFFFFF; background:#d24012;">搜店铺</a>
+					</div>
+					<div class="wzgysc-search-key">
+						<div>打印纸</div>
+						<div>水笔</div>
+						<div>纸篓</div>
+						<div>化验药剂</div>
+						<div>文件夹</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="w1000 wzgysc-nav-all">
+			<div class="wzgysc-nav">
+				<div class='wzgysc-nav-title'>全部商品分类</div>
+				<div class="wzgysc-nav-pop">
+					<a href="物资供应商城-店铺.html">办公用品</a>
+					<a href="物资供应商城-店铺.html">印刷品</a>
+					<a href="物资供应商城-店铺.html">化玻器皿</a>
+					<a href="物资供应商城-店铺.html">化验药剂</a>
+					<a href="物资供应商城-店铺.html">化验用具</a>
+					<a href="物资供应商城-店铺.html">维修工具</a>
+					<a href="物资供应商城-店铺.html">其他材料</a>
+				</div>
+			</div>
+			<a href="物资供应商城-店铺.html" class="wzgysc-link">首页</a>
+			<a href="物资供应商城-订单审批.html" class="wzgysc-link">订单审批</a>
+			<a href="物资供应商城-订单查询.html" class="wzgysc-link">订单查询</a>
+			<a class="wzgysc-gwc" href="物资供应商城-购物车.html">购物车</a>
+		</div>	
+<script>
+
+		$('.head').load('头部-物资供应商城.html');
+		
+		$('.wzgysc-search-key > div').click(function(){
+			$('.wzgysc-search-input > input').val($(this).text());
+		})
+		
+
+</script>

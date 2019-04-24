@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/style.css" />
+		 <link rel="stylesheet" href="layui/css/layui.css" media="all">
+	</head>
+	<body>
+		<!--头部页面-->
+		<div class="head"></div>
+		<div class="w1000 ov dir-contents">
+			<div class="dir">
+				<div class="dir-title"></div>
+				<div class="dir-center">
+					<div link="供应商信息.html">
+						<div class="dir-center-ico"></div>
+						全部供应商
+					</div>
+					<div link="供应商-商品信息.html">
+						<div class="dir-center-ico"></div>
+						供应商产品目录
+					</div>
+					<a href="供应商-新增供应商.html" target="_blank">
+						<div class="dir-center-ico"></div>
+						新增供应商
+					</a>
+				</div>
+				<div class="dir-bottom"></div>
+			</div>
+			<div class="contents"></div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+<script src="layui/layui.js"></script>
+<script>
+	$(function(){
+		//默认载入页面
+		$('.head').load('头部-工作人员.html');
+		
+		
+		
+		//默认载入页面
+		$('.contents').load('供应商信息.html');
+		$('.dir-center > div:first').addClass('dir-center-active');
+		
+		//左边导航载入页面
+		$('.dir-center > div').click(function(){
+			$('.dir-center > div').removeClass('dir-center-active');
+			$(this).addClass('dir-center-active');
+			var i=$(this).attr('link');
+			$('.contents').load(i);
+		})
+	})
+</script>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/style.css" />
+		 <link rel="stylesheet" href="layui/css/layui.css" media="all">
+	</head>
+	<body>
+		<!--头部页面-->
+		<div class="head"></div>
+		<div class="w1000 ov dir-contents">
+			<div class="dir">
+				<div class="dir-title"></div>
+				<div class="dir-center">
+					<div link="招标公告.html">									
+						<div class="dir-center-ico"></div>
+						询价公告
+					</div>
+					<div link="中标公告.html">
+                        <!--
+                        	作者：offline
+                        	时间：2018-03-26
+                        	描述：TODO
+                        -->     
+						<div class="dir-center-ico"></div>
+						中标公告
+					</div>
+					<div link="采购公告.html">
+						<!--
+                        	作者：offline
+                        	时间：2018-03-26
+                        	描述：TODO
+                        -->
+						<div class="dir-center-ico"></div>
+						采购公告
+					</div>
+					<div link="退标公告.html">
+						<!--
+                        	作者：offline
+                        	时间：2018-03-26
+                        	描述：TODO
+                        -->
+						<div class="dir-center-ico"></div>
+						退标公告
+					</div>
+				</div>
+				<div class="dir-bottom"></div>
+			</div>
+			<div class="contents"></div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+<script src="layui/layui.js"></script>
+<script>
+	$(function(){
+		//默认载入页面
+		$('.head').load('头部-供应商.html');
+		
+		
+		//默认载入页面
+		$('.contents').load('招标公告.html');
+		$('.dir-center > div:first').addClass('dir-center-active');
+		
+		//左边导航载入页面
+		$('.dir-center > div').click(function(){
+			$('.dir-center > div').removeClass('dir-center-active');
+			$(this).addClass('dir-center-active');
+			var i=$(this).attr('link');
+			$('.contents').load(i);
+		})
+	})
+</script>

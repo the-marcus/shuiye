@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/style.css" />
+		<style>
+			.s2{display: none;}
+			.gys-reg-from select{width:47%;float:left;}
+			.plusshu{width:100%;background:#f1913e;color:#fff !important;text-align: center;cursor:pointer;}
+			::-webkit-input-placeholder { color:#ccc; }
+			.minus{cursor:pointer;float:left;-webkit-border-radius:50%;overflow:hidden;text-align:center;width:30px;height:30px;line-height:25px;margin-top:5px;margin-left:10px;background:#b1b1b1;color:#fff;font-size:20px;}
+			.gys{text-align: center;}
+			.gys >div{display: inline-block;width:500px;}
+			table{width:100%;}
+			th{background:#def6ff;}
+			td,th{font-size:12px;border:1px solid #ccc;padding:5px 0;}
+			.pluszcm{margin:20px auto;width:80%;}
+			.pluszcm > input{display: block;float:left;width:70%;height:30px;line-height:30px;text-align: center;border:1px solid #ccc;}
+			.pluszcm > div{float:left;width:30%;height:30px;line-height:30px;text-align: center;background:#007DDB;color:#fff;}
+		</style>
+	</head>
+	<body>
+		<!--头部页面-->
+		<div class="head"></div>
+		
+		<div class="w1000 ov gys">
+			<div>
+				<table>
+					<tr>
+						<th>名称</th>
+						<th>注册码</th>
+						<th>时间</th>
+					</tr>
+					<tr>
+						<td>江西南丰振宇集团</td>
+						<td>495947</td>
+						<td>2018-2-13</td>
+					</tr>
+					<tr>
+						<td>聚龙股份有限公司</td>
+						<td>356879</td>
+						<td>2018-3-15</td>
+					</tr>
+				</table>
+				<div class="ov pluszcm">
+					<input type="text"/>
+					<div>新增</div>
+				</div>
+				
+			</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+<script>
+	$(function(){
+		//默认载入页面
+		$('.head').load('头部-工作人员.html');
+		$('.nav > a').outerWidth($('.nav').outerWidth()/$('.nav > a').size());
+		
+		
+		
+		
+		$('.pluszcm >div').click(function(){
+			var val=$(this).prev().val();
+			var num='';
+			for(var i=1;i<=6;i++){
+				num+=parseInt(Math.random()*10+1).toString();
+			}
+			
+			var txt='<tr>';
+						 txt+='<td>'+val+'</td>';
+						txt+='<td>'+num+'</td>';
+						txt+='<td>2018-4-4</td>';
+					txt+='</tr>';
+			$('table').append(txt);
+			$(this).prev().val('');
+		})
+		
+		
+		
+	})
+</script>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/style.css" />
+		 <link rel="stylesheet" href="layui/css/layui.css" media="all">
+	</head>
+	<body>
+
+		
+		<!--商城头部-->
+		<div class="head"></div>
+		
+		<div class="w1000 ov">
+			
+			<div class="wzgysc-xq">
+				<img src="img/aircontainer10.jpg" class="wzgysc-xq-img">
+				<div class="wzgysc-xq-sx">
+					<div class="wzgysc-xq-sx-t">格力（GREE）正1.5匹 变频 品圆 冷暖 壁挂式空调 KFR-35GW/(35592)FNhDa-A3</div>
+					<div class="wzgysc-xq-sx-txt">售价：3399元</div>
+					<div class="wzgysc-xq-sx-txt">编号：1993092</div>
+					<div class="wzgysc-xq-sx-txt">品牌：格力</div>
+					<div class="wzgysc-xq-sx-txt">使用面积：15-20㎡</div>
+					<div class="wzgysc-xq-sx-txt">商品毛重：13.5kg</div>
+					
+					<div class="wzgysc-xq-sx-txt">供应商：江西南丰振宇集团</div>
+				</div>
+			</div>
+			
+			<div class="wzgysc-xq-contents-title">商品详情</div>
+			<div class="wzgysc-xq-contents">
+				<div class="wzgysc-xq-contents-cs">
+					<div>型号：KFR-35GW/(35592)FNhDa-A3</div>
+					<div>类别：壁挂式</div>
+					<div>制冷类型：冷暖</div>
+					<div>适用面积(平方米)：约16-24㎡</div>
+					<div>制冷量(W)：3500(450-3800)</div>
+					<div>扫风方式：上下扫风</div>
+					<div>自动清洁：不支持</div>
+					<div>电压/频率（V/HZ）：220/50</div>
+					<div>特性：新冷媒R32</div>
+				</div>
+				<img src="img/containerdetail_1.jpg" />
+				<img src="img/containerdetail_2.jpg" />
+				<img src="img/containerdetail_3.jpg" />
+				<img src="img/containerdetail_4.jpg" />
+				<img src="img/containerdetail_5.jpg" />
+			</div>
+			
+		</div>
+		
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+<script src="layui/layui.js"></script>
+<script>
+	$(function(){
+		//默认载入页面
+		$('.head').load('头部-供应商.html');
+		
+		
+		$('.wzgysc-plus').click(function(){
+			var i=$('.wzgysc-xq-input').val();
+			i++;
+			$('.wzgysc-xq-input').val(i);
+		})
+		
+		$('.wzgysc-min').click(function(){
+			var i=$('.wzgysc-xq-input').val();
+			if(i<=1){
+				i=1;
+			}else{
+				i--;
+			}
+			
+			$('.wzgysc-xq-input').val(i);
+		})
+		
+		
+		
+		$('.wzgysc-xq-gwc-join').click(function(){
+			layui.use('layer', function(){
+			  var layer = layui.layer;
+			  layer.open({
+			  	title:'提示',
+
+				  type: 1,
+				 area: '250px',
+				  content: "<div style='padding:10px;'><span style='margin-left:10px;'>商品添加成功<span><a href='http://baidu.com' style='color:#ff0000;margin-left:10px;'>商品添加成功<a></div>" //这里content是一个DOM，注意：最好该元素要存放在body最外层，否则可能被其它的相对元素所影响，
+				  ,
+				  btn: ['确认'],
+				  cancle: function(index, layero){
+				    //按钮【按钮一】的回调
+				  }
+				 
+				});
+			}); 
+		})
+	})
+</script>

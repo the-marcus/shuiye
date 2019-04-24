@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/style.css" />
+		<style>
+			.s2{display: none;}
+			.gys-reg-from select{width:47%;float:left;}
+			.plusshu{width:100%;background:#f1913e;color:#fff !important;text-align: center;cursor:pointer;}
+			::-webkit-input-placeholder { color:#ccc; }
+			.minus{cursor:pointer;float:left;-webkit-border-radius:50%;overflow:hidden;text-align:center;width:30px;height:30px;line-height:25px;margin-top:5px;margin-left:10px;background:#b1b1b1;color:#fff;font-size:20px;}
+			.gys{text-align: center;}
+			.gys >div{display: inline-block;}
+		</style>
+	</head>
+	<body>
+		<!--头部页面-->
+		<div class="head"></div>
+		
+		<div class="w1000 ov gys">
+			<div>
+			<div class="gys-reg ov">
+				<div class="gys-reg-title">商品名称</div>
+				<div class="gys-reg-from" style='width:400px;'>
+					<input type="text" style="width:100%;">
+				</div>
+			</div>
+			<div class="gys-reg ov">
+				<div class="gys-reg-title">类别</div>
+				<div class="gys-reg-from" style='width:400px;'>
+					<select class="s0">
+						<option value="s1">工业器材</option>
+						<option value="s2">常用电器</option>
+					</select>
+					
+					<select class="s1">
+						<option>水泵</option>
+						<option>电路检测</option>
+					</select>
+					<select class="s2">
+						<option>空调</option>
+						<option>冰箱</option>
+					</select>
+				</div>
+			</div>
+			<div class="gys-reg ov">
+				<div class="gys-reg-title">售价</div>
+				<div class="gys-reg-from" style='width:400px;'>
+					<input type="text" style="width:100%;">
+				</div>
+			</div>
+			<div class="gys-reg ov">
+				<div class="gys-reg-title">编号</div>
+				<div class="gys-reg-from" style='width:400px;'>
+					<input type="text" style="width:100%;">
+				</div>
+				
+			</div>
+			<div class="gys-reg ov">
+				<div class="gys-reg-title">品牌</div>
+				<div class="gys-reg-from" style='width:400px;'>
+					<input type="text" style="width:100%;">
+				</div>
+			</div>
+			<div class="gys-reg ov">
+				<div class="gys-reg-title">型号</div>
+				<div class="gys-reg-from" style='width:400px;'>
+					<input type="text" style="width:100%;">
+				</div>
+			</div>
+			<div class="gys-reg ov">
+				<div class="gys-reg-title">图片</div>
+				<div class="gys-reg-from" style="width:400px;position: relative;border:1px solid #ccc;">
+					<input type="file" style="width:100%;height:100%;position: absolute;z-index: 2;left:0;top:0;opacity: 0;">
+					<div style="width:100%;height:40px;line-height:40px;text-align: center;background:#fff;color:#333;">选择上传的图片</div>
+				</div>
+			</div>
+			<div class="gys-reg ov">
+				<div class="gys-reg-title"></div>
+				<div class="gys-reg-from" style='width:400px;'>
+					<div class="plusshu">新增属性</div>
+				</div>
+			</div>
+			<div class="gys-submit">
+				<div>
+					<a href="#" class="next">确定</a>
+					<a href="#" class="close">取消</a>
+				</div>
+			</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+<script>
+	$(function(){
+		//默认载入页面
+		$('.head').load('头部-供应商.html');
+		$('.nav > a').outerWidth($('.nav').outerWidth()/$('.nav > a').size());
+		
+		
+		
+		$('.s0').change(function(){
+			$(this).siblings().hide();
+			$('.'+$(this).val()).show();
+		})
+		
+		$('.plusshu').click(function(){
+			var txt='<div class="gys-reg ov">';
+				txt+='<input class="gys-reg-title" placeholder="输入属性名" type="text" style="border:1px solid #ccc;padding:0 10px;">';
+				txt+='<div class="gys-reg-from" style="width:400px;">';
+				txt+='<input type="text" style="width:100%;padding:0 10px;" placeholder="输入属性内容">';
+				txt+='</div>';
+				txt+='<div class="minus">x</div>';
+				txt+='</div>';
+			$(this).parents('.gys-reg').before(txt);
+		})
+		
+		
+		$('body').on('click','.minus',function(){
+			$(this).parents('.gys-reg').remove();
+		})
+		
+	})
+</script>

@@ -1,0 +1,109 @@
+
+<div class="w100 ov">
+	
+	<div class="search">
+		<div>搜索</div>
+		<input type="text" />
+	</div>
+	<div class="xjxmcx-table">
+		<table>
+			<tr>
+				<th>编号</th>
+				<th>询价项目列表</th>
+				<th>进度</th>
+				<th>操作</th>
+			</tr>
+			<tr>
+				<td>1704</td>
+				<td>项目1</td>
+				<td>待审核</td>
+				<td><a href='询价项目-待审核.html' target="_blank">查看</a></td>
+			</tr>
+			<tr>
+				<td>1524</td>
+				<td>项目2</td>
+				<td>发布</td>
+				<td><a href='询价项目-已审核.html' target="_blank">查看</a></td>
+			</tr>
+			<tr>
+				<td>1723</td>
+				<td>项目3</td>
+				<td>报价中</td>
+				<td><a href='询价项目-已审核.html' target="_blank">查看</a></td>
+			</tr>
+			<tr>
+				<td>1548</td>
+				<td>项目4</td>
+				<td>比价</td>
+				<td><a href='询价项目.html' target="_blank">查看</a></td>
+			</tr>
+			<tr>
+				<td>1367</td>
+				<td>项目5</td>
+				<td>磋商</td>
+				<td><a href='询价项目.html' target="_blank">查看</a></td>
+			</tr>
+			<tr>
+				<td>1259</td>
+				<td>项目6</td>
+				<td>授标</td>
+				<td><a href='询价项目.html' target="_blank">查看</a></td>
+			</tr>
+			<tr>
+				<td>1657</td>
+				<td>项目7</td>
+				<td>发货</td>
+				<td><a href='询价项目.html' target="_blank">查看</a></td>
+			</tr>
+			<tr>
+				<td>1524</td>
+				<td>项目8</td>
+				<td>审核</td>
+				<td><a href='询价项目.html' target="_blank">查看</a></td>
+			</tr>
+			<tr>
+				<td>1368</td>
+				<td>项目9</td>
+				<td>已结束</td>
+				<td><a href='询价项目.html' target="_blank">查看</a></td>
+			</tr>
+		</table>
+	</div>
+</div>
+<div class="w100 ov pageall">
+	<table width="98%" border="0" cellspacing="0" cellpadding="2" align="center"><tbody><tr><td height="35"><div class="pagebox" style="margin:20px 0px 8px 0px;"><span class="pagebox_pre_nolink">首页</span> <span class="pagebox_pre_nolink">上一页</span><span class="pagebox_num_nonce">1</span><span class="pagebox_num"><a href="?page=2&amp;MainType=&amp;LessType=LE114">2</a></span><span class="pagebox_num"><a href="?page=3&amp;MainType=&amp;LessType=LE114">3</a></span><span class="pagebox_num"><a href="?page=4&amp;MainType=&amp;LessType=LE114">4</a></span><span class="pagebox_num"><a href="?page=5&amp;MainType=&amp;LessType=LE114">5</a></span><span class="pagebox_num"><a href="?page=6&amp;MainType=&amp;LessType=LE114">6</a></span><span class="pagebox_num"><a href="?page=7&amp;MainType=&amp;LessType=LE114">7</a></span><span class="pagebox_num"><a href="?page=8&amp;MainType=&amp;LessType=LE114">8</a></span><span class="pagebox_next"><a href="?page=2&amp;MainType=&amp;LessType=LE114">下一页</a></span> <span class="pagebox_next"><a href="?page=27&amp;MainType=&amp;LessType=LE114">尾页</a></span></div></td></tr></tbody></table>
+</div>
+
+
+<script>
+	 
+	$('table .view').click(function(){
+		layui.use('layer', function(){
+		  var layer = layui.layer;
+		  layer.open({
+		  	title:'查看待审核',
+		  	 area: '600px',
+			  type: 2,
+			  content: '待审核弹窗.html' ,//这里content是一个DOM，注意：最好该元素要存放在body最外层，否则可能被其它的相对元素所影响，
+			  btn: ['确认', '取消'],
+			  cancle: function(index, layero){
+			    //按钮【按钮一】的回调
+			  },
+			  cancle: function(index, layero){
+			    //按钮【按钮一】的回调
+			  }
+			});
+		}); 
+	})
+	
+	
+	
+	
+	$('.search > div').click(function(){
+		$('.xjxmcx-table tr:first').next().nextAll().remove();
+		$('.pagebox_num').remove();
+		$('.pageall').css('margin-top','180px');
+	})
+</script>
+
+

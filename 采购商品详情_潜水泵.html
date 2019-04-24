@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/style.css" />
+		 <link rel="stylesheet" href="layui/css/layui.css" media="all">
+	</head>
+	<body>
+
+		
+		<!--商城头部-->
+		<div class="head"></div>
+		
+		<div class="w1000 ov">
+			
+			<div class="wzgysc-xq">
+				<img src="img/qianshuibeng_title.jpg" class="wzgysc-xq-img">
+				<div class="wzgysc-xq-sx">
+					<div class="wzgysc-xq-sx-t">上海人民QY油浸潜水泵380V深井抽水工业农用灌溉油浸泵2.2-7.5KW</div>
+					<div class="wzgysc-xq-sx-txt">售价：3399元</div>
+					<div class="wzgysc-xq-sx-txt">品牌：人民</div>
+					<div class="wzgysc-xq-sx-txt">材质: 铸铁</div>
+					<div class="wzgysc-xq-sx-txt">驱动方式: 电动</div>
+					<div class="wzgysc-xq-sx-txt">供应商：江西南丰振宇集团</div>
+				</div>
+			</div>
+			
+			<div class="wzgysc-xq-contents-title">商品详情</div>
+			<div class="wzgysc-xq-contents">
+				<div class="wzgysc-xq-contents-cs">
+					<div></div>
+					<div>上海人民380V潜水泵,全铜线电机保证！水泵包1年！广泛应用于农田灌溉、鱼塘引水等用途，流量大，寿命长。电机位于水泵下部，内充5-10号机械油，以利电机绕组散热、冷却和轴承润滑，使电泵能使用于电压波动较大的农村，而不导致电机因失压而烧坏。</div>
+					<div> </div>
+				</div>
+				<img src="img/qianshuibeng_1.jpg" />
+				<img src="img/qianshuibeng_2.jpg" />
+				<img src="img/qianshuibeng_3.jpg" />
+				<img src="img/qianshuibeng_4.jpg" />
+				<img src="img/qianshuibeng_5.jpg" />
+				<img src="img/qianshuibeng_6.jpg" />
+			</div>
+			
+		</div>
+		
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+<script src="layui/layui.js"></script>
+<script>
+	$(function(){
+		//默认载入页面
+		$('.head').load('头部-供应商.html');
+		
+		
+		$('.wzgysc-plus').click(function(){
+			var i=$('.wzgysc-xq-input').val();
+			i++;
+			$('.wzgysc-xq-input').val(i);
+		})
+		
+		$('.wzgysc-min').click(function(){
+			var i=$('.wzgysc-xq-input').val();
+			if(i<=1){
+				i=1;
+			}else{
+				i--;
+			}
+			
+			$('.wzgysc-xq-input').val(i);
+		})
+		
+		
+		
+		$('.wzgysc-xq-gwc-join').click(function(){
+			layui.use('layer', function(){
+			  var layer = layui.layer;
+			  layer.open({
+			  	title:'提示',
+
+				  type: 1,
+				 area: '250px',
+				  content: "<div style='padding:10px;'><span style='margin-left:10px;'>商品添加成功<span><a href='http://baidu.com' style='color:#ff0000;margin-left:10px;'>商品添加成功<a></div>" //这里content是一个DOM，注意：最好该元素要存放在body最外层，否则可能被其它的相对元素所影响，
+				  ,
+				  btn: ['确认'],
+				  cancle: function(index, layero){
+				    //按钮【按钮一】的回调
+				  }
+				 
+				});
+			}); 
+		})
+	})
+</script>
